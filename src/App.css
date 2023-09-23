@@ -4,8 +4,6 @@
   width: 760px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 96px 98px 92px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,6 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin: 100px 100px 0;
 }
 
 /* Стили радио-контейнера */
@@ -51,7 +50,7 @@
 .validation-error {
   position: absolute;
   bottom: -20px;
-  color: #EB5757;
+  color: #eb5757;
   font-family: Noto Sans;
   font-size: 12px;
   font-style: normal;
@@ -99,7 +98,7 @@
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 32px;
+  margin: 32px 100px 100px;
 }
 
 /* Стили кнопок */
@@ -124,14 +123,14 @@ button.disabled {
 }
 
 /* Стили кнопки "Отмена" */
-.cancel {
+button.cancel {
   color: #7a5cfa;
   border: #7a5cfa solid 1px;
   background: #ffffff;
 }
 
 /* Стили кнопки "Отправить" */
-.submit {
+button.submit {
   color: #ffffff;
   background: #7a5cfa;
   border: #7a5cfa 1px solid;
@@ -151,15 +150,20 @@ button.disabled {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  position: relative;
+  background: url(./assets/arrow-form-icon-down.svg) no-repeat;
+  background-position: right 10px top 50%;
 }
-
 /* Стили фокуса на селекте */
+
 .focus {
   border: #7a5cfa 2px solid;
   border-bottom: none;
   padding: 14px;
   border-radius: 8px 8px 0 0;
   color: #333;
+  background: url(./assets/arrow-form-icon-up.svg) no-repeat;
+  background-position: right 10px top 50%;
 }
 
 /* Стили контейнера селекта */
@@ -240,7 +244,7 @@ button.disabled {
   width: 18px;
   height: 18px;
   border-radius: 32px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   border: 1px solid #ccc;
 }
 
@@ -262,6 +266,10 @@ button.disabled {
   align-items: center;
 }
 
+.radio-input {
+  display: none;
+}
+
 .radio-custom {
   width: 24px;
   height: 24px;
@@ -272,12 +280,12 @@ button.disabled {
 
 /* Стили выбранной радио-кнопки */
 .radio-label.selected .radio-custom {
-  background:url(./assets/radio-check.svg) no-repeat center/cover;
+  background: url(./assets/radio-check.svg) no-repeat center/cover;
 }
 
 /* Стили невалидного поля */
 .invalid {
-  border: 2px solid #EB5757;
+  border: 2px solid #eb5757;
   padding: 14px;
   background: url(./assets/error-form-icon.svg) no-repeat;
   background-position: 98% center;
