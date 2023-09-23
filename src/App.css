@@ -1,0 +1,284 @@
+/* Общие стили */
+.app {
+  min-height: 100vh;
+  width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 96px 98px 92px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Стили формы */
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Стили радио-контейнера */
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Стили меток чекбоксов и радио */
+.checkbox-label,
+.radio-label {
+  color: #666;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Стили меток полей ввода */
+.input-label {
+  color: #666;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+/* Стили сообщения об ошибке валидации */
+.validation-error {
+  position: absolute;
+  bottom: -20px;
+  color: #EB5757;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/* Стили текстовых полей ввода и селектов */
+.text-input,
+.select-input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 15px;
+}
+
+/* Стили фокуса на текстовых полях ввода и селектах */
+.text-input:focus,
+.select-input:focus {
+  border: 2px solid #7a5cfa;
+  outline: none;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+/* Стили плейсхолдера текстовых полей ввода и селектов */
+.text-input::placeholder,
+.select-input::placeholder {
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Стили контейнера текстового поля */
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+/* Стили контейнера кнопок */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+/* Стили кнопок */
+button {
+  width: 140px;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+/* Стили неактивной кнопки */
+button.disabled {
+  background: #333;
+  border: 1px solid #333;
+  opacity: 0.5;
+}
+
+/* Стили кнопки "Отмена" */
+.cancel {
+  color: #7a5cfa;
+  border: #7a5cfa solid 1px;
+  background: #ffffff;
+}
+
+/* Стили кнопки "Отправить" */
+.submit {
+  color: #ffffff;
+  background: #7a5cfa;
+  border: #7a5cfa 1px solid;
+}
+
+/* Стили контейнера радио-кнопок */
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили селекта */
+.select-input {
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Стили фокуса на селекте */
+.focus {
+  border: #7a5cfa 2px solid;
+  border-bottom: none;
+  padding: 14px;
+  border-radius: 8px 8px 0 0;
+  color: #333;
+}
+
+/* Стили контейнера селекта */
+.select-container {
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* Стили опций селекта */
+.select-option {
+  border-bottom: #666;
+  padding: 16px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Стили при наведении на опцию селекта */
+.select-option:hover {
+  background: #7a5cfa;
+  color: #fff;
+}
+
+/* Стили контейнера радио-кнопки */
+.select-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Стили контейнера чекбокса */
+.checkbox-label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Стили чекбокса */
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Стили выбранного чекбокса */
+.checkbox-custom.checked {
+  background: url(./assets/check.svg) no-repeat center/contain;
+}
+
+/* Стили переключателя */
+.switch-custom {
+  width: 49px;
+  height: 24px;
+  border-radius: 32px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Стили включенного переключателя */
+.switch-custom.on {
+  background-color: #7a5cfa;
+}
+
+.switch-custom::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 32px;
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+}
+
+/* Стили включенного переключателя */
+.switch-custom.on::before {
+  transform: translateX(-25px);
+}
+
+/* Стили контейнера радио-кнопки */
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили радио-кнопки */
+.radio-label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.radio-custom {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 32px;
+  margin-right: 8px;
+}
+
+/* Стили выбранной радио-кнопки */
+.radio-label.selected .radio-custom {
+  background:url(./assets/radio-check.svg) no-repeat center/cover;
+}
+
+/* Стили невалидного поля */
+.invalid {
+  border: 2px solid #EB5757;
+  padding: 14px;
+  background: url(./assets/error-form-icon.svg) no-repeat;
+  background-position: 98% center;
+}
